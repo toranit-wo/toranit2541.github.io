@@ -45,7 +45,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <div class=\"card\" *ngFor=\"let friend of friends\">\n    <img src=\"{{'assets/images/'+friend.pic}}\" alt=\"Avatar\" style=\"width:100%\">\n    <div class=\"container\">\n      <h4><b>{{friend.name}}</b></h4>\n      <p>{{friend.position}}</p>\n    </div>\n  </div>\n<div>\n<!--\n<div class=\"card\" *ngIf=\"users\">มีข้อมูลแล้ว</div>\n<div class=\"card\"> {{ users | json }} </div>\n-->\n<div><h1> รายการ user </h1></div>\n<div class=\"card\" *ngFor=\"let u of users\">\n  <div class=\"container\">\n    <h4><b>{{u._source.user}}</b></h4>\n    <p>{{u.password}}</p>\n  </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<div  align=\"center\"><h1> รายการ user </h1></div>\n<br>\n  <div class=\"card\" *ngFor=\"let friend of friends\">\n    <img src=\"{{'assets/images/'+friend.pic}}\" alt=\"Avatar\" style=\"width:100%\">\n    <div class=\"container\">\n      <h4><b>{{friend.name}}</b></h4>\n      <p>{{friend.position}}</p>\n    </div>\n  </div>\n<div>\n<!--\n<div class=\"card\" *ngIf=\"users\">มีข้อมูลแล้ว</div>\n<div class=\"card\"> {{ users | json }} </div>\n-->\n<!-- <div><h1> รายการ user </h1></div> -->\n<div class=\"card\" *ngFor=\"let u of users\">\n  <div class=\"container\">\n    <h4><b>{{u._source.user}}</b></h4>\n    <p>{{u.password}}</p>\n  </div>\n</div>\n<button type=\"button\" router-link=\"/myself\">ยกเลิก</button>\n");
 
 /***/ }),
 
@@ -58,7 +58,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<img src=\"/assets/comsciubu-facebook.jpg\" alt=\"CSUBU\" class=\"center\">\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- หน้า about -->\n<img src=\"/assets/comsciubu-facebook.jpg\" alt=\"CSUBU\" class=\"center\">\n<!-- <img src=\"/assets/images/pare.jpg\" alt=\"CSUBU\" align=\"center\" width=\"300\"  height=\"300\"> -->\n<html>\n\n<head>\n    <title>\n        <!-- Insert Images : ตำแหน่งและเส้นขอบรูปภาพ -->\n    </title>\n</head>\n<body>\n        <div align=\"center\">\n        <!-- ตำแหน่งและเส้นขอบรูปภาพ<br> -->\n        <!-- <img src=\"/assets/images/pare.jpg\" alt=\"CSUBU\" width=\"300\"  height=\"300\" > -->\n        </div>\n</body>\n</html>");
 
 /***/ }),
 
@@ -75,6 +75,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/myself/myself.component.html":
+/*!************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/myself/myself.component.html ***!
+  \************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<p>myself works!</p>\n");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/register/register.component.html":
 /*!****************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/register/register.component.html ***!
@@ -84,7 +97,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (" <form action=\"\" method=\"POST\" style=\"border:1px solid #ccc\">\n  <div class=\"container\">\n    <h1>ลงทะเบียน</h1>\n  <p>กรุณากรอกข้อมูลต่อไปนี้ให้ครบถ้วน</p>\n    <hr>\n    <label for=\"user\"><b>User</b></label>\n    <input type=\"text\" placeholder=\"User\" #user name=\"user\" required>\n\n    <label for=\"password\"><b>Password</b></label>\n    <input type=\"password\" placeholder=\"Password\" #password name=\"password\" required>\n\n    <p>ยอมรับข้อกำหนด<a href=\"#\" style=\"color:dodgerblue\">ข้อกำหนด</a>ของเว็บไซต์</p>\n\n    <div class=\"clearfix\">\n      <button type=\"button\" class=\"cancelbtn\">ยกเลิก</button>\n      <button type=\"button\" class=\"signupbtn\" (click)=\"signup(user.value, password.value)\">ลงทะเบียน</button>\n    </div>\n  </div>\n</form>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<form action=\"\" method=\"POST\" (ngSubmit)=\"signup(registerForm)\" #registerForm =\"ngForm\" style=\"border:1px solid #ccc\">\n  <div class=\"container\">\n    <h1>ลงทะเบียน</h1>\n  <p>กรุณากรอกข้อมูลต่อไปนี้ให้ครบถ้วน</p>\n    <hr>\n    <label for=\"user\"><b>User</b></label>\n    <input type=\"text\" placeholder=\"User\" #user name=\"user\" ngModel>\n\n    <label for=\"password\"><b>Password</b></label>\n    <input type=\"password\" placeholder=\"Password\" #password name=\"password\" ngModel>\n\n    <p>ยอมรับข้อกำหนด<a href=\"#\" style=\"color:dodgerblue\">ข้อกำหนด</a>ของเว็บไซต์</p>\n\n    <div class=\"clearfix\">\n      <button type=\"button\" class=\"cancelbtn\">ยกเลิก</button>\n      <button type=\"submit\" class=\"signupbtn\" >ลงทะเบียน</button>\n    </div>\n  </div>\n</form>\n");
 
 /***/ }),
 
@@ -110,7 +123,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<table id=\"users\">\n  <tbody>\n    <tr>\n      <th>User</th>\n      <th>Password</th>\n    </tr>\n    <tr *ngFor=\"let u of users\">\n      <td>{{ u._source.user }} </td>\n      <td>{{ u._source.password }}</td>\n    </tr>\n  </tbody>\n</table>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<table id=\"users\">\n  <tbody>\n    <tr>\n      <th>User</th>\n      <th>Password</th>\n    </tr>\n    <tr *ngFor=\"let u of user\">\n      <td>{{ u.value.user }} </td>\n      <td>{{ u.value.password }}</td>\n    </tr>\n  </tbody>\n</table>\n");
 
 /***/ }),
 
@@ -455,6 +468,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
 /* harmony import */ var _register_register_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./register/register.component */ "./src/app/register/register.component.ts");
 /* harmony import */ var _users_users_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./users/users.component */ "./src/app/users/users.component.ts");
+/* harmony import */ var angularfire2__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! angularfire2 */ "./node_modules/angularfire2/index.js");
+/* harmony import */ var angularfire2__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(angularfire2__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _environments_firebase_config__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./../environments/firebase.config */ "./src/environments/firebase.config.ts");
+/* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! angularfire2/database */ "./node_modules/angularfire2/database/index.js");
+/* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(angularfire2_database__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _myself_myself_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./myself/myself.component */ "./src/app/myself/myself.component.ts");
 
 
 
@@ -462,6 +482,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+
+
+// import { LogComponent } from './log/log.component';
+// import { PComponent } from './p/p.component';
 
 
 
@@ -478,12 +505,16 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _login_login_component__WEBPACK_IMPORTED_MODULE_8__["LoginComponent"],
             _home_home_component__WEBPACK_IMPORTED_MODULE_9__["HomeComponent"],
             _register_register_component__WEBPACK_IMPORTED_MODULE_10__["RegisterComponent"],
-            _users_users_component__WEBPACK_IMPORTED_MODULE_11__["UsersComponent"]
+            _users_users_component__WEBPACK_IMPORTED_MODULE_11__["UsersComponent"],
+            _myself_myself_component__WEBPACK_IMPORTED_MODULE_16__["MyselfComponent"],
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
             _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
             _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_15__["FormsModule"],
+            angularfire2__WEBPACK_IMPORTED_MODULE_12__["AngularFireModule"].initializeApp(_environments_firebase_config__WEBPACK_IMPORTED_MODULE_13__["firebaseConfig"]),
+            angularfire2_database__WEBPACK_IMPORTED_MODULE_14__["AngularFireDatabaseModule"],
         ],
         providers: [],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
@@ -625,22 +656,63 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginComponent", function() { return LoginComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! angularfire2/database */ "./node_modules/angularfire2/database/index.js");
+/* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(angularfire2_database__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+// import { Component, OnInit } from '@angular/core';
+
+// @Component({
+//   selector: 'app-login',
+//   templateUrl: './login.component.html',
+//   styleUrls: ['./login.component.scss']
+// })
+// export class LoginComponent implements OnInit {
+//   constructor() { }
+//   ngOnInit() {
+//   }
+//   login(user: string, password: string) {
+//     // console.log(`เรียกฟังก์ชัน login(user=${user}, password=${password})`);
+//     if (user === 'admin') {
+//       console.log('ยินดีต้อนรับ admin');
+//     } else {
+//       console.log(`ยินดีต้อนรับคุณ ${user}`);
+//     }
+//   }
+// }
+
+
 
 
 let LoginComponent = class LoginComponent {
-    constructor() { }
+    constructor(db, rooter) {
+        this.db = db;
+        this.rooter = rooter;
+        this.users = db.list("/60114440136/user");
+    }
     ngOnInit() {
+        this.users.snapshotChanges().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(actions => {
+            return actions.map(action => ({ key: action.key, value: action.payload.val() }));
+        })).subscribe(items => {
+            this.user = items;
+        });
     }
     login(user, password) {
-        // console.log(`เรียกฟังก์ชัน login(user=${user}, password=${password})`);
-        if (user === 'admin') {
-            console.log('ยินดีต้อนรับ admin');
-        }
-        else {
-            console.log(`ยินดีต้อนรับคุณ ${user}`);
+        for (let u of this.user) {
+            if (user == u.value.user) {
+                console.log("ผ่านuser");
+                if (password == u.value.password) {
+                    this.rooter.navigate(['/card']);
+                    console.log("ผ่านpassword");
+                }
+            }
         }
     }
 };
+LoginComponent.ctorParameters = () => [
+    { type: angularfire2_database__WEBPACK_IMPORTED_MODULE_2__["AngularFireDatabase"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] }
+];
 LoginComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-login',
@@ -648,6 +720,50 @@ LoginComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./login.component.scss */ "./src/app/login/login.component.scss")).default]
     })
 ], LoginComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/myself/myself.component.scss":
+/*!**********************************************!*\
+  !*** ./src/app/myself/myself.component.scss ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL215c2VsZi9teXNlbGYuY29tcG9uZW50LnNjc3MifQ== */");
+
+/***/ }),
+
+/***/ "./src/app/myself/myself.component.ts":
+/*!********************************************!*\
+  !*** ./src/app/myself/myself.component.ts ***!
+  \********************************************/
+/*! exports provided: MyselfComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MyselfComponent", function() { return MyselfComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let MyselfComponent = class MyselfComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+};
+MyselfComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-myself',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./myself.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/myself/myself.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./myself.component.scss */ "./src/app/myself/myself.component.scss")).default]
+    })
+], MyselfComponent);
 
 
 
@@ -680,33 +796,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _user_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../user.service */ "./src/app/user.service.ts");
+/* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! angularfire2/database */ "./node_modules/angularfire2/database/index.js");
+/* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(angularfire2_database__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 
 
 let RegisterComponent = class RegisterComponent {
-    constructor(userservice, router) {
+    constructor(userservice, router, db) {
         this.userservice = userservice;
         this.router = router;
+        this.db = db;
         this.user = '';
         this.password = '';
     }
     ngOnInit() {
     }
-    signup(user, password) {
-        console.log(`เรียกฟังก์ชัน signup(user=${user}, password=${password})`);
-        this.user = user;
-        this.password = password;
-        this.userservice._saveUser(user, password).subscribe(() => {
-            this.router.navigate(['/login']);
-        }, error => {
-            console.error(error);
-        });
+    signup(data) {
+        this.db.list('/60114440136/user').push(data.value);
+        alert("ลงทะเบียนเสร็จสิ้น");
     }
 };
 RegisterComponent.ctorParameters = () => [
     { type: _user_service__WEBPACK_IMPORTED_MODULE_3__["UserService"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+    { type: angularfire2_database__WEBPACK_IMPORTED_MODULE_4__["AngularFireDatabase"] }
 ];
 RegisterComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -785,18 +900,18 @@ let UserService = class UserService {
         this.http = http;
         this.friends = [
             {
-                name: 'Franky Lee Jones',
-                pic: 'frank.png',
+                name: 'Duenchay Wongtree',
+                pic: 'pare.jpg',
                 position: 'CEO',
             },
             {
-                name: 'Alice in Wonderland',
-                pic: 'alisa.jpg',
+                name: 'Thidarat Ruamsamrong',
+                pic: 'ket.jpg',
                 position: 'Secretary',
             },
             {
-                name: 'Pat Tracy Johnson',
-                pic: 'pat.jpg',
+                name: 'Toranit Wongkhamsa',
+                pic: 'king.jpg',
                 position: 'IT Support',
             }
         ];
@@ -866,29 +981,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UsersComponent", function() { return UsersComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../user.service */ "./src/app/user.service.ts");
+/* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! angularfire2/database */ "./node_modules/angularfire2/database/index.js");
+/* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(angularfire2_database__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+
 
 
 
 let UsersComponent = class UsersComponent {
-    constructor(userService) {
-        this.userService = userService;
+    constructor(db) {
+        this.db = db;
+        this.users = db.list("/60114440136/user");
     }
     ngOnInit() {
-        this.userService._getUsers().subscribe((data) => {
-            this.users = data.result.hits;
-            console.log(this.users);
-            for (const u of this.users) {
-                // console.log(u['source'])
-                // console.log(u._source)
-                console.log(u._source.user);
+        this.users.snapshotChanges().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(actions => {
+            return actions.map(action => ({ key: action.key, value: action.payload.val() }));
+        })).subscribe(items => {
+            this.user = items;
+            for (let u of this.user) {
+                console.log(u.value.user);
             }
-        }, error => {
         });
     }
 };
 UsersComponent.ctorParameters = () => [
-    { type: _user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"] }
+    { type: angularfire2_database__WEBPACK_IMPORTED_MODULE_2__["AngularFireDatabase"] }
 ];
 UsersComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -928,6 +1045,32 @@ const environment = {
  * on performance if an error is thrown.
  */
 // import 'zone.js/dist/zone-error';  // Included with Angular CLI.
+
+
+/***/ }),
+
+/***/ "./src/environments/firebase.config.ts":
+/*!*********************************************!*\
+  !*** ./src/environments/firebase.config.ts ***!
+  \*********************************************/
+/*! exports provided: firebaseConfig */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "firebaseConfig", function() { return firebaseConfig; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+
+const firebaseConfig = {
+    apiKey: "AIzaSyDbqTLRoyevE_g8ij3UwyNBCjI29VAwRgk",
+    authDomain: "topic1-ae65a.firebaseapp.com",
+    databaseURL: "https://topic1-ae65a.firebaseio.com",
+    projectId: "topic1-ae65a",
+    storageBucket: "topic1-ae65a.appspot.com",
+    messagingSenderId: "679786295445",
+    appId: "1:679786295445:web:cabc78e24d7569a9bc2b9c",
+    measurementId: "G-FTB9T7YWF0"
+};
 
 
 /***/ }),
